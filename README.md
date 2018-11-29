@@ -1,4 +1,4 @@
-# Arducheeso Project 11 ITM
+# Arducheeso: Project 11 ITM
 
 ### About:
 Two Arduino. One server, one client.
