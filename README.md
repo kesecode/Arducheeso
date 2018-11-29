@@ -1,10 +1,9 @@
 # Arducheeso Project 11 ITM
 
 ### About:
-**Two Arduino. One server, one client.**
+Two Arduino. One server, one client.
 
-**Client + NFC-sensor is sending a "cheese-request" to the server. The server will log this request and trigger an actor (LED, Sound, etc.).**
-
+Client + NFC-sensor is sending a "cheese-request" to the server. The server will log this request and trigger an actor (LED, Sound, etc.).
 ### Menu:
 ---
 * #### **Workspace Setup**
