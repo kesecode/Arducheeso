@@ -1,4 +1,5 @@
-# Arducheeso Project 11ITM:
+# Arducheeso Project 11ITM
+
 ### Menu:
 ---
 * #### **Workspace Setup**
@@ -8,7 +9,7 @@
 ---
 
 
-# Workspace Setup:
+## Workspace Setup:
 
 ### Used Software 
 ---
@@ -20,13 +21,13 @@
 ---
 ### Setup PlatformIO
 ---
-# Organization Notes:
+## Organization Notes:
 
 ### Using GitHub:
 ---
 ### PlatformIO Project Structure:
 ---
-# Code Documentation:
+## Code Documentation:
 
 ### Server
 ---
@@ -34,7 +35,7 @@
 ---
 ### Web Interface
 ---
-# Arduino Circuit Diagram:
+## Arduino Circuit Diagram:
 
 ### Server
 ---
