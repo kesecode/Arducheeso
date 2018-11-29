@@ -31,7 +31,7 @@ We're using the [GitHub Desktop](https://desktop.github.com/) client for our *ve
 
 ---
 ### Setup GitHub Desktop
-**1.** Download and install the [GitHub Desktop]<br(https://desktop.github.com/) client<br>
+**1.** Download and install the [GitHub Desktop](https://desktop.github.com/) client<br>
 **2.** Open the client and **log in** to your GitHub account<br>
 **3.** Choose **clone repository** and clone the Arducheeso repo<br>
 **4.** Select the branch you want to work with<br>
