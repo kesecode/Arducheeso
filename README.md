@@ -252,8 +252,8 @@ void loop() {
 ## IV. Arduino Circuit Diagram
 
 ### Server
-![](Server/Server_Steckplatine.jpg)
+![](Server/Server_Circuit.jpg)
 ---
 ### Client
-![](Client/Client_Steckplatine.jpg)
+![](Client/Client_Circuit.jpg)
 ---
