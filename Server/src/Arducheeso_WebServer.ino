@@ -2,7 +2,7 @@
 
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
-#include <ESP8266WiFiMulti.h> 
+#include <ESP8266WiFiMulti.h>
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h>   // Include the WebServer library
 
@@ -15,10 +15,11 @@ const int led = LED_BUILTIN;
 void handleRoot();               // function prototypes for HTTP handlers
 void handleNotFound();
 
-void setup(void){
+void setup(){
   Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   delay(10);
   Serial.println('\n');
+  pinMode(LED_BUILTIN, OUTPUT);
 
   wifiMulti.addAP("Phil", "root003347");   // add Wi-Fi networks you want to connect to
 
@@ -37,7 +38,7 @@ void setup(void){
   if (MDNS.begin("esp8266")) {              // Start the mDNS responder for esp8266.local
     Serial.println("mDNS responder started");
   } else {
-    Serial.println("Error setting up MDNS responder!");
+    Serial.println("Error setting up MDNS responder.");
   }
 
   server.on("/", handleRoot);               // Call the 'handleRoot' function when a client requests URI "/"
@@ -45,6 +46,7 @@ void setup(void){
 
   server.begin();                           // Actually start the server
   Serial.println("HTTP server started");
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 void loop(void){
@@ -53,11 +55,11 @@ void loop(void){
 
 void handleRoot() {
   server.send(200, "text/plain", "Webserver says hello!");    // Send HTTP status 200 (Ok) and send some text to the browser/client
-    digitalWrite(LED_BUILTIN, 1);
-    delay(1000);
-    digitalWrite(LED_BUILTIN, 0);
     Serial.println("Client connected.");
-  
+        digitalWrite(LED_BUILTIN, LOW);
+        delay(1000);
+        digitalWrite(LED_BUILTIN, HIGH);
+
 }
 
 void handleNotFound(){
