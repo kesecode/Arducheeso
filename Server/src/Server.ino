@@ -6,7 +6,6 @@
   The Server is processing requests from the client. It's sending back a response.
 */
 
-//#include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h>   // Include the WebServer library
@@ -20,7 +19,7 @@ void handleNotFound();
 void setup() {
   Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   Serial.println('\n');
-  //pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT); //Actor
 
   wifiMulti.addAP("Phil", "root003347");   // add Wi-Fi networks you want to connect to
   Serial.println("Connecting ...");
