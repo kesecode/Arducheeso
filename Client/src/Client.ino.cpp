@@ -1,10 +1,15 @@
+# 1 "/var/folders/lc/dcm3sz4d577_bpw296nwdc580000gn/T/tmpuJAhWf"
+#include <Arduino.h>
+# 1 "/Users/davidweppler/Documents/GitHub/Arducheeso/Client/src/Client.ino"
 #include <ESP8266WiFi.h>
 
-const char* ssid = "Phil";                                  //SSID Config
-const char* password = "root003347";                          //Password Config
+const char* ssid = "Phil";
+const char* password = "root003347";
 
-const char* host = "172.20.10.4";                       //SERVER IP Config
-
+const char* host = "172.20.10.4";
+void setup();
+void loop();
+#line 8 "/Users/davidweppler/Documents/GitHub/Arducheeso/Client/src/Client.ino"
 void setup() {
   Serial.begin(115200);
 
@@ -19,28 +24,28 @@ void setup() {
 
 
 void loop() {
-  WiFiClient client;                                        //Client declaration
+  WiFiClient client;
 
   Serial.printf("\n[Connecting to %s ... ", host);
 
-  if(client.connect(host, 80)) {                            //Client connecting to host
+  if(client.connect(host, 80)) {
     Serial.println("connected]");
   }
 
   else {
-    Serial.println("connection failed!]");                  //Connection failed statement
+    Serial.println("connection failed!]");
     client.stop();
   }
 
-  while(client.connected()) {                               //Loops while client is connected to host
-    if (digitalRead(2)==false) {                            //Sensor input awaited
+  while(client.connected()) {
+    if (digitalRead(2)==false) {
       Serial.println("**************************************************");
       Serial.println("********************Triggered!********************");
       Serial.println("**************************************************");
       Serial.println("[Sending a request]");
-      client.print(String("GET /") + " HTTP/1.1\r\n" +      //Sending a request
+      client.print(String("GET /") + " HTTP/1.1\r\n" +
                   "Host: " + host + "\r\n" +
-                  //"Connection: close\r\n" +
+
                   "\r\n");
       Serial.println("__________________________________________________________");
       Serial.println("                     [Response:]");
@@ -49,7 +54,7 @@ void loop() {
 
       while (client.connected()) {
         if (client.available()) {
-            String line = client.readStringUntil('\n');     //Reading data response from host
+            String line = client.readStringUntil('\n');
             Serial.println(line);
           }
         }
