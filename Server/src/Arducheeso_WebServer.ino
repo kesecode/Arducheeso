@@ -14,12 +14,23 @@ const int led = LED_BUILTIN;
 
 void handleRoot();               // function prototypes for HTTP handlers
 void handleNotFound();
+File log;
+String logname = "log.txt";
+int pinCS=99;
 
-void setup(){
+void setup() {
   Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   delay(10);
   Serial.println('\n');
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(pinCS, OUTPUT);
+
+  if(SD.begin()) {
+    Serial.println("Yo MAMA!");
+  }
+  else {
+    Serial.println("YO fickt euch alle!");
+  }
 
   wifiMulti.addAP("Phil", "root003347");   // add Wi-Fi networks you want to connect to
 
@@ -49,7 +60,7 @@ void setup(){
   digitalWrite(LED_BUILTIN, HIGH);
 }
 
-void loop(void){
+void loop(void) {
   server.handleClient();                    // Listen for HTTP requests from clients
 }
 
@@ -62,6 +73,6 @@ void handleRoot() {
 
 }
 
-void handleNotFound(){
+void handleNotFound() {
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
 }

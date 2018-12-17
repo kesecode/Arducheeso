@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char* ssid = "SSID";                                  //SSID Config
-const char* password = "password";                          //Password Config
+const char* ssid = "Phil";                                  //SSID Config
+const char* password = "root003347";                          //Password Config
 
 const char* host = "000.000.000.000";                       //SERVER IP Config
 
