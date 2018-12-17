@@ -19,7 +19,7 @@ void handleNotFound();
 void setup() {
   Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   Serial.println('\n');
-  //pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT); //Actor
 
   wifiMulti.addAP("Phil", "root003347");   // add Wi-Fi networks you want to connect to
   Serial.println("Connecting ...");
