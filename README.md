@@ -193,7 +193,7 @@ void handleNotFound(){
 ```
 ---
 ### Client
-```cpp=
+```c
 #include <ESP8266WiFi.h>
 
 const char* ssid = "SSID";                                  //SSID Config
