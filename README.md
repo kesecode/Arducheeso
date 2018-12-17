@@ -180,10 +180,10 @@ void loop(void){
 
 void handleRoot() {
   server.send(200, "text/plain", "Webserver says hello!");    // Send HTTP status 200 (Ok) and send some text to the browser/client
-    Serial.println("Client connected.");
-        digitalWrite(LED_BUILTIN, LOW);
-        delay(1000);
-        digitalWrite(LED_BUILTIN, HIGH);                      // Makes the LED blink when a client connects to the webserver
+  Serial.println("Client connected.");
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, HIGH);                      // Makes the LED blink when a client connects to the webserver
 
 }
 
