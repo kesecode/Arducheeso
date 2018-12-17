@@ -38,14 +38,9 @@ void loop() {
       Serial.println("***************************Triggered!***************************");
       Serial.println("****************************************************************");
       Serial.println("[Sending a request]");
-      client.print(String("GET /") + " HTTP/1.1\r\n" +      //Sending a request
-                  "Host: " + host + "\r\n" +
-                  //"Connection: close\r\n" +
-                  "\r\n");
+      client.print(String("GET /") + " HTTP/1.1\r\n");
       Serial.println("__________________________________________________________");
       Serial.println("                     [Response:]");
-      Serial.println("__________________________________________________________");
-      Serial.println("__________________________________________________________");
 
       while (client.connected()) {
         if (client.available()) {
@@ -53,6 +48,8 @@ void loop() {
             Serial.println(line);
           }
         }
+      Serial.println("__________________________________________________________");
+      Serial.println("__________________________________________________________");
       }
     }
 }
