@@ -1,3 +1,11 @@
+/*
+  ARDUCHEESO PROJECT
+
+  Client:
+
+  The client is sending requests to the server after pushing a button
+*/
+
 #include <ESP8266WiFi.h>
 
 const char* ssid = "Phil";                                  //SSID Config

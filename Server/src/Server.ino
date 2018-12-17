@@ -6,7 +6,6 @@
   The Server is processing requests from the client. It's sending back a response.
 */
 
-//#include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h>   // Include the WebServer library
@@ -57,8 +56,16 @@ void loop(void) {
 void handleRoot() {
   server.send(200, "text/plain", "Cheese!");    // Send HTTP status 200 (Ok) and send some text to the browser/client
     Serial.println("Client connected.");
+        digitalWrite(LED_BUILTIN, LOW);         //Light sequence
+        delay(200);
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(300);
         digitalWrite(LED_BUILTIN, LOW);
         delay(1000);
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(300);
+        digitalWrite(LED_BUILTIN, LOW);
+        delay(200);
         digitalWrite(LED_BUILTIN, HIGH);
 
 }
