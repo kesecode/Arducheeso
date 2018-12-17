@@ -118,10 +118,8 @@ As soon as you actively start working on an issue, change add a *work in progres
 Basically our main programm is still the same thing as the **sketch** we know from the classic *Arduino IDE*.
 But *PlatformIO* gives us some **additional features** in terms of our **project structure**.
 
-**[*WORK IN PROGRESS*]**
-
 ---
-## III. Code Documentation [*WORK IN PROGRESS*]
+## III. Code Documentation
 
 ### Server
 ``` c
@@ -251,11 +249,11 @@ void loop() {
 
 ```
 ---
-### Web Interface
----
-## IV. Arduino Circuit Diagram [*WORK IN PROGRESS*]
+## IV. Arduino Circuit Diagram
 
 ### Server
+![](Server/Server_Steckplatine.jpg)
 ---
 ### Client
+![](Client/Client_Steckplatine.jpg)
 ---
