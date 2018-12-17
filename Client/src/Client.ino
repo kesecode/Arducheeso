@@ -34,9 +34,9 @@ void loop() {
 
   while(client.connected()) {                               //Loops while client is connected to host
     if (digitalRead(2)==false) {                            //Sensor input awaited
-      Serial.println("**************************************************");
-      Serial.println("********************Triggered!********************");
-      Serial.println("**************************************************");
+      Serial.println("****************************************************************");
+      Serial.println("***************************Triggered!***************************");
+      Serial.println("****************************************************************");
       Serial.println("[Sending a request]");
       client.print(String("GET /") + " HTTP/1.1\r\n" +      //Sending a request
                   "Host: " + host + "\r\n" +
